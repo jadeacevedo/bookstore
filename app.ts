@@ -38,6 +38,8 @@ document.getElementById('search-form')?.addEventListener('submit', (event) => {
 })
 
 document.getElementById('results')?.addEventListener('click', (event) => {
+    if (!(event.target instanceof HTMLLIElement) )return
+   
     (event.target as HTMLLIElement).classList.toggle('selected')
 })
 render(bookData)
